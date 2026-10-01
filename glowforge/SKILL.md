@@ -55,6 +55,15 @@ Blue anodized alloy blanks, 225 LPI at 1000/50 = hazy, partial coating removal; 
 - Test patch run 2026-10-01: swatches 1000/50, 1000/60, 1000/70, 1000/80, 800/70, 1000/60×2 at 340 LPI. **Winner: swatch 6 = 1000/60, 2 passes** (brightest, evenly cleared, cleanest label edges; 1–2 hazy, 3–5 bright but mottled).
 - **Production: 1000 speed / 60 power / 2 passes / 340 LPI** for fronts and backs on blue blanks; confirmed on black blanks too (same settings; QR scans). Small text works best ≥12 units SemiBold/Bold.
 
+## Prepping the next job while one is printing
+- You can edit the open design during a print, but safer: open a **new blank design in a new tab** (Create a new design → Create a blank design), upload, place, set settings, and **do not press Print there**. The running job is unaffected.
+- To reproduce positions exactly, select each placed design in the printing tab and read the ruler labels (left offset at top, top offset at left, in inches), then drag the new copy until its labels match (±0.02 in is easy; 66 px per inch at 100% zoom).
+- A redesign that keeps the same top-left margins keeps its top-left corner at the same coordinates, so v1 positions carry over to v2.
+- Pasting (`cmd+v`) lands the copy offset ~+0.27 in / +0.25 in from the original *or* back near the bed's top-left corner — always read the ruler labels after a paste before dragging.
+- Waits are capped at 10 s per call. Big uploads can take 20–30 s to show up; re-screenshot rather than assuming the upload failed.
+- Material (uncertified, 0.008 in) and each setting group must be re-entered in a new design.
+- Black blanks on a dark jig give the camera no visible card edges — align by the recorded inch coordinates, and ask the user to eyeball the seating.
+
 ## Typical session order
 1. Read your project notes (if any) and the settings log above.
 2. Generate/merge SVGs, verify QR, preview PNG.

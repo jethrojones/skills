@@ -5,7 +5,7 @@ from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 
 import os
-F = os.environ.get("FONT_DIR", "./fonts/")  # folder with ArchivoBlack-Regular.ttf, Archivo-Medium.ttf, Archivo-Bold.ttf, JetBrainsMono-Medium.ttf
+F = os.environ.get("FONT_DIR", "./fonts/")  # folder with the Archivo / JetBrains Mono .ttf files
 W, H = 338.6, 212.6  # units = 0.01in; card is 86x54mm
 
 def text_path(s, font, size, x, y, anchor="start", track=0):
@@ -50,11 +50,11 @@ d, w1 = text_path("OPTIMIZATION", "ArchivoBlack-Regular.ttf", 29, m, 70); b += p
 d, w2 = text_path("DOC", "ArchivoBlack-Regular.ttf", 29, m, 102, track=2); b += path(d)
 b += f'<path transform="translate({m + w2 + 24},76) scale(0.9)" d="{BOLT}"/>'
 b += f'<rect x="{m}" y="116" width="46" height="3"/>'
-d, _ = text_path("Working systems. Smoother for customers.", "Archivo-Medium.ttf", 10.5, m, 138); b += path(d)
-d, _ = text_path("Better for employees.", "Archivo-Medium.ttf", 10.5, m, 152); b += path(d)
+d, _ = text_path("Working systems. Smoother for customers.", "Archivo-SemiBold.ttf", 12.5, m, 139); b += path(d)
+d, _ = text_path("Better for employees.", "Archivo-SemiBold.ttf", 12.5, m, 154); b += path(d)
 d, _ = text_path("JETHRO JONES", "Archivo-Bold.ttf", 12, m, 178, track=1.2); b += path(d)
-d, _ = text_path("hello@optimizationdoc.com", "JetBrainsMono-Medium.ttf", 9, W - m, 178, anchor="end"); b += path(d)
-d, _ = text_path("optimizationdoc.com", "JetBrainsMono-Medium.ttf", 9, W - m, 192, anchor="end"); b += path(d)
+d, _ = text_path("hello@optimizationdoc.com", "JetBrainsMono-Bold.ttf", 11, W - m, 178, anchor="end"); b += path(d)
+d, _ = text_path("optimizationdoc.com", "JetBrainsMono-Bold.ttf", 11, W - m, 194, anchor="end"); b += path(d)
 open("front.svg", "w").write(svg(b))
 
 # ---------- BACK ----------
@@ -91,7 +91,7 @@ for key, sub in VARIANTS.items():
         d, _ = text_path(ln, "ArchivoBlack-Regular.ttf", 17.5, tx, y); b += path(d); y += 22
     b += f'<rect x="{tx}" y="{y - 8}" width="46" height="3"/>'
     for i, t in enumerate(sub):
-        d, _ = text_path(t, "Archivo-Medium.ttf", 9.5, tx, y + 16 + 13 * i); b += path(d)
+        d, _ = text_path(t, "Archivo-SemiBold.ttf", 12, tx, y + 18 + 15 * i); b += path(d)
     pass
     if key == "C": open("back.svg", "w").write(svg(b))
 print("modules:", n)
