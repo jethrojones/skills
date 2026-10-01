@@ -53,7 +53,7 @@ Print flow (only if authorized): Print → "Preparing" → Scanning/autofocus �
 ## Part 3 — Settings log (update after every test)
 Blue anodized alloy blanks, 225 LPI at 1000/50 = hazy, partial coating removal; **340 LPI is clearly sharper** (confirmed). The bright "deep" look needs more energy per area (raise power, lower speed, or 2 passes) without blooming the 0.2 mm blank.
 - Test patch run 2026-10-01: swatches 1000/50, 1000/60, 1000/70, 1000/80, 800/70, 1000/60×2 at 340 LPI. **Winner: swatch 6 = 1000/60, 2 passes** (brightest, evenly cleared, cleanest label edges; 1–2 hazy, 3–5 bright but mottled).
-- **Production: 1000 speed / 60 power / 2 passes / 340 LPI** for fronts and backs on blue blanks; black blanks started at the same settings.
+- **Production: 1000 speed / 60 power / 2 passes / 340 LPI** for fronts and backs on blue blanks; confirmed on black blanks too (same settings; QR scans). Small text works best ≥12 units SemiBold/Bold.
 
 ## Typical session order
 1. Read your project notes (if any) and the settings log above.
